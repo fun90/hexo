@@ -4,7 +4,7 @@
 
 # Site
 title: Fun90
-subtitle: 做一只逗比的工程狮，不要惊动爱情
+subtitle: 学习始于记录，终于思考
 description:
 author: Fun90
 language: zh-CN
@@ -66,11 +66,8 @@ plugin:
 - hexo-generator-feed
 
 ## Themes: https://hexo.io/themes/
-# theme: landscape
-# theme: pacman 
-# theme: jacman
-theme: yilia
-# theme: landscape-plus
+#theme: landscape
+theme: hexo-theme-zero
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
