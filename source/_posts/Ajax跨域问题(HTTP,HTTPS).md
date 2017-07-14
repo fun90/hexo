@@ -1,7 +1,7 @@
 id: xmlhttprequest-cros
 title: AJAX跨域POST问题(HTTP,HTTPS)
 date: 2014-02-05 22:48:36
-tags: [Web,Q&A]
+tags: [Web,JavaScript]
 ---
 浏览器遵循[同源策略(same-origin policy)](https://en.wikipedia.org/wiki/Same-origin_policy)，它不允许当前站点的脚本与不同源的站点之间进行数据交互，只要协议、域名、端口有任何一个不同，都被视为不同源。但有时确实又必须在当前站点通过Ajax请求其他不同源的资源，这明显与同源策略相悖，于是就有了JavaScript跨域问题。
 
@@ -26,14 +26,14 @@ CORS（Cross-Origin Resource Sharing）跨域资源共享，定义了一种跨�
 
 ## 所遇问题
 1. 通过给XHR实例设置withCredentials属性的，必须为同源才可以。
-如：`xhr.withCredentials = true`
+   如：`xhr.withCredentials = true`
 
 2. 对于是POST和存在自定义HTTP头时无数据响应
-这两种情况可以通过添加Access-Control-Allow-Methods/Access-Control-Allow-Headers来解决。
+   这两种情况可以通过添加Access-Control-Allow-Methods/Access-Control-Allow-Headers来解决。
 
 3. 对于多个站点域要跨域调用怎么办？
-搜了一下，有说通过空格分隔开`Access-Control-Allow-Origin: http://a.com http://c.com`，有说通过逗号分隔开的`Access-Control-Allow-Origin: http://a.com, http://c.com`，没有进行验证测试。
-(Access-Control-Allow-Origin: *)表示允许任何域都可以提交请求。
+   搜了一下，有说通过空格分隔开`Access-Control-Allow-Origin: http://a.com http://c.com`，有说通过逗号分隔开的`Access-Control-Allow-Origin: http://a.com, http://c.com`，没有进行验证测试。
+   (Access-Control-Allow-Origin: *)表示允许任何域都可以提交请求。
 
 ### 示例
 ```java

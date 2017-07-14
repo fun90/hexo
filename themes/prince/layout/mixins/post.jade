@@ -1,0 +1,84 @@
+mixin postInfo(page)
+  .post-info= full_date(page.date,'MMM Do YYYY')
+
+mixin postPhotos(page)
+  if page.photos && page.photos.length
+    .post-gallery
+      each photo in page.photos
+        p
+          img(src=url_for(photo))
+
+
+mixin posts()
+  .articles
+    - page.posts.each(function(item){
+      article.post-block
+        +postPhotos(item)
+        h2.post-title
+          -var title = item.title !== '' ? item.title:__('no title')
+          if item.link !== ''
+            a.post-link(href=url_for(item.link) target='_blank')=title
+          else
+            a.post-link(href=url_for(item.path))=title
+        +postInfo(item)
+        if item.excerpt
+          .post-entry!= item.excerpt
+        else
+          .post-entry
+            != item.content
+        .post-meta
+          a(href=url_for(item.path)).article-more= theme.excerpt_link
+          if (item.tags && item.tags.length >0)
+            .post-tags-box!= list_tags(item.tags,{show_count:false,style:null,saperator:','})
+    - })
+
+mixin post(page)
+  .post
+    article.post-block
+      +postPhotos(page)
+      -var title = page.title !== '' ? page.title:__('no title')
+      h1.post-title
+        != title
+      +postInfo(page)
+      .post-entry
+        != page.content
+      if (page.tags && page.tags.length >0)
+        .post-tags-box!= list_tags(page.tags,{show_count:false,style:null,saperator:','})
+
+mixin postTagList()
+  .archive.col-md-8.col-xs-12
+    - var posts = site.posts.sort('date',-1)
+    - posts.each(function(item){
+      -item.tags.each(function(tag){
+        if page.tag == tag.name
+          .post-item
+            -var title = item.title !== '' ? item.title:__('no title')
+            if item.link !== ''
+              a.post-item-link(href=url_for(item.link) target='_blank')
+                span.post-title.col-sm-9.col-xs-12=title
+                span.post-date.col-sm-3.col-xs-12=full_date(item.date,'MMM Do YYYY')
+              .postList-tags-box!= list_tags(item.tags,{show_count:false,style:null,saperator:','})
+            else
+              a.post-item-link(href=url_for(item.path))
+                span.post-title.col-sm-9.col-xs-12=title
+                span.post-date.col-sm-3.col-xs-12=full_date(item.date,'MMM Do YYYY')
+              .postList-tags-box!= list_tags(item.tags,{show_count:false,style:null,saperator:','})
+      -})
+    -})
+
+
+mixin postList()
+  .archive.col-md-8.col-xs-12
+    - var posts = site.posts.sort('date',-1)
+    - posts.each(function(item){
+      .post-item
+        -var title = item.title !== '' ? item.title:__('no title')
+        if item.link !== ''
+          a.post-item-link(href=url_for(item.link) target='_blank')
+            span.post-title.col-sm-9.col-xs-12=title
+            span.post-date.col-sm-3.col-xs-12=full_date(item.date,'MMM Do YYYY')
+        else
+          a.post-item-link(href=url_for(item.path))
+            span.post-title.col-sm-9.col-xs-12=title
+            span.post-date.col-sm-3.col-xs-12=full_date(item.date,'MMM Do YYYY')
+    -})

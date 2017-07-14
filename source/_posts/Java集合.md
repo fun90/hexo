@@ -2,7 +2,7 @@
 id: java-collection
 title: Java集合
 date: 2015-08-06 21:03:09
-tags: [JAVA]
+tags: [Java]
 ---
 总结了几张简单的图
 ## Collection

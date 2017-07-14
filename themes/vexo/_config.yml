@@ -1,0 +1,32 @@
+author: fun90 # 作者
+description: fun90's blog
+keyword: java, 软件, mac
+
+excerpt_link: 阅读全文
+
+menu:
+ 首页: /
+ 标签: /tags/
+ 归档: /archives/
+ # Projects: /project/
+ 关于: /about/
+
+# highlight
+highlight:
+  tomorrow
+
+# gitment
+gitment_owner: fun90
+gitment_repo: fun90.github.io
+gitment_oauth_id: 3a5391174396dbac6d14
+gitment_oauth_secret: f9d2cf3b9daa6ae81e27ed9bc4ae36e1fb3c10f7
+
+# uyan
+# if you want to use uyan as your blog comment, plz remove/comment out gitment config
+
+baidu_id: 
+
+about: 
+  banner: /css/images/002.jpg
+  avatar: https://avatars6.githubusercontent.com/u/13536188?v=4&s=460
+  description: The end is always near.

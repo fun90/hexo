@@ -67,7 +67,11 @@ plugin:
 
 ## Themes: https://hexo.io/themes/
 #theme: landscape
-theme: hexo-theme-zero
+# theme: zero
+# theme: material-1.4.0
+# theme: prince
+theme: vexo
+# theme: indigo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

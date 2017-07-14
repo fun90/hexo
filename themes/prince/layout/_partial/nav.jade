@@ -1,0 +1,14 @@
+nav.page-navigation
+  .nav-container
+    .page-header-logo
+      h1.prince-log
+        a.home-link(href=url_for())=theme.name
+    button.navbar-toggle(type="button" data-toggle="collapse" data-target=".main-nav-items")
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    ul.collapse.navbar-collapse.main-nav-items
+      each value, key in theme.nav
+        li.menu-item
+          a(href=url_for(value) target='_self')=key
