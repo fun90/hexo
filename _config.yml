@@ -44,8 +44,11 @@ highlight:
   tab_replace:
 
 # Category & Tag
-default_category: uncategorized
+default_category: soft
 category_map:
+  # 默认: uncategorized
+  技术: tech
+  软件: soft
 tag_map:
 
 # Date / Time format
@@ -66,12 +69,12 @@ plugin:
 - hexo-generator-feed
 
 ## Themes: https://hexo.io/themes/
-#theme: landscape
+# theme: landscape
 # theme: zero
-# theme: material-1.4.0
 # theme: prince
-theme: vexo
+# theme: vexo
 # theme: indigo
+theme: aero-dual
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
