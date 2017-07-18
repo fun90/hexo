@@ -1,0 +1,37 @@
+<!-- Categories Header -->
+<%- partial('_partial/header', {headerType: 'categories'}) %>
+<!-- Categories List -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+     <%
+        if(is_category()) { %>
+            <div class="waterfall">
+          <% page.posts.each(function(post){ %>
+
+            <%- partial('_partial/archive-entry', {post: post, index: true}) %>
+
+        <% }) %>
+            </div>
+        <% } else {
+            site.categories.each(function(cate){
+                if(cate.length) {
+            %>
+
+            <h3 class="archive-separator" id="tag-<%=cate.name %>"><%=cate.name %></h3>
+
+            <div class="waterfall">
+            <% cate.posts.each(function(post){  %>
+
+                <%- partial('_partial/archive-entry', {post: post, index: true}) %>
+            <% }) %>
+            </div>
+
+            <% }
+            })
+        }
+    %>
+    </div>
+  </div>
+</div>
+<%- partial('_partial/pagination') %>

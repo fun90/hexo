@@ -5,3 +5,10 @@ uncategorized: Uncategorized
 untagged: Untagged
 no_excerpt: No Post Excerpt
 archive_title: Blog Archives
+tag_title: Blog Tags
+categories_title: Blog Categories
+menu:
+  Home: Home
+  Archives: Archives
+  Tags: Tags
+  Categories: Categories

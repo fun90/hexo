@@ -22,6 +22,10 @@
     pageTitle = post.title || __('untitled_post');
   } else if (headerType === 'archive') {
     pageTitle = __('archive_title');
+  } else if (headerType === 'tags') {
+    pageTitle = __('tags_title');
+  } else if (headerType === 'categories') {
+    pageTitle = __('categories_title');
   }
 %>
 
@@ -41,7 +45,7 @@
                   <% if (theme.menu[i].icon) { %>
                   <i class="fa fa-<%= theme.menu[i].icon %> fa-stack-2x"></i>
                   <% } else { %>
-                  <%= i %>
+                  <%= __('menu.' + i) %>
                   <% } %>
                 </a>
               </li>

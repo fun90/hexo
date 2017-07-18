@@ -3,8 +3,10 @@ menu:
   Home: /
   Archives: /archives
   # change github and email values to your own addresses
-  Github: https://github.com/levblanc
-  Email: mailto:levblanc@163.com
+  Tags: /tags
+  Categories: /categories
+  # Github: https://github.com/levblanc
+  # Email: mailto:levblanc@163.com
 rss: /atom.xml
 
 # Set to false to disable banner

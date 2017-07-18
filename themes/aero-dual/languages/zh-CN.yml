@@ -4,4 +4,11 @@ untitled_post: 无标题文章
 uncategorized: Uncategorized
 untagged: Untagged
 no_excerpt: 暂无文章摘要
-archive_title: Blog Archives
+archive_title: 归档
+tags_title: 标签列表
+categories_title: 分类列表
+menu:
+  Home: 首页
+  Archives: 归档
+  Tags: 标签
+  Categories: 分类
