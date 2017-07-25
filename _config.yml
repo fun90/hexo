@@ -5,7 +5,8 @@
 # Site
 title: Fun90
 subtitle: 学习始于记录，贵在思考
-description:
+description: 记录学习、开发、软件分享的地方，Java, Mac, 软件, 效率
+keyword: Java, Mac, 软件, 效率
 author: Fun90
 language: zh-CN
 timezone:
@@ -24,7 +25,7 @@ tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: :lang
+i18n_dir: :languages
 skip_render:
 
 # Writing
@@ -69,12 +70,13 @@ plugin:
 - hexo-generator-feed
 
 ## Themes: https://hexo.io/themes/
-# theme: landscape
-# theme: zero
-# theme: prince
-# theme: vexo
-# theme: indigo
+#theme: landscape
+#theme: zero
+#theme: prince
+#theme: vexo
+#theme: indigo
 theme: aero-dual
+#theme: clean-blog
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

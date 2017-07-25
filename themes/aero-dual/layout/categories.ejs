@@ -18,7 +18,9 @@
                 if(cate.length) {
             %>
 
-            <h3 class="archive-separator" id="tag-<%=cate.name %>"><%=cate.name %></h3>
+        <h3 class="tag-name" id="tag-<%=cate.name %>">
+            #<a href="/<%=cate.path %>"><%=cate.name %></a>
+        </h3>
 
             <div class="waterfall">
             <% cate.posts.each(function(post){  %>

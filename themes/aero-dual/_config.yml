@@ -5,8 +5,8 @@ menu:
   # change github and email values to your own addresses
   Tags: /tags
   Categories: /categories
-  # Github: https://github.com/levblanc
-  # Email: mailto:levblanc@163.com
+  Github: https://github.com/fun90
+#  Email: mailto:levblanc@163.com
 rss: /atom.xml
 
 # Set to false to disable banner
@@ -31,6 +31,7 @@ widgets:
 - category
 - tag
 - archive
+- toc
 
 # widget behavior
 archive_type: 'monthly'
@@ -41,3 +42,8 @@ favicon: /favicon.ico
 
 # Google Analytics Tracking ID
 google_analytics:
+
+# 是否开启toc
+# toc: false
+toc:
+  list_number: true  # 是否显示数字排序
