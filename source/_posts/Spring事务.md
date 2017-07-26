@@ -3,11 +3,11 @@ id: spring-tx
 title: Spring事务
 date: 2015-08-10 22:37:15
 tags: [Spring]
+categories: 技术
 ---
 
 ## 事务传递
-![](http://7xnocv.com1.z0.glb.clouddn.com/spring-tx-1.png)
-<!-- more -->
+![](http://7xnocv.com1.z0.glb.clouddn.com/spring-tx-1.png)<!-- more -->
 ## 事务配置
 分为2类：拦截器、注解
 ### 拦截器
